@@ -1,24 +1,23 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace walletinout.Models
+namespace walletinout.Models;
+public class TransactionModel
 {
-    public class TransactionModel
-    {
-        public int Id { get; set; }
-        public string Date { get; set; }
-        public string Amount { get; set; }
-        public string Name { get; set; }
-        public string Category { get; set; }
-        public int CategoryId { get; set; }
-        public TransactionType TransactionType { get; set; }
-    }
-
-    public enum TransactionType
-    {
-        [Display(Name = "Income")]
-        Income = 1,
-
-        [Display(Name = "Expense")]
-        Expense = 2
-    }
+    public int Id { get; set; }
+    public string Date { get; set; }
+    public string Amount { get; set; }
+    public string Name { get; set; }
+    public string Category { get; set; }
+    public int CategoryId { get; set; }
+    public TransactionType TransactionType { get; set; }
 }
+
+public enum TransactionType
+{
+    [Display(Name = "Income")]
+    Income = 1,
+
+    [Display(Name = "Expense")]
+    Expense = 2
+}
+
